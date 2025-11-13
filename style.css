@@ -53,7 +53,7 @@ backdrop-filter:blur(6px);padding:10px;z-index:1000;
 
 .brand {
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color:#01d16f;
     text-decoration: none;
 }
 
@@ -102,6 +102,7 @@ backdrop-filter:blur(6px);padding:10px;z-index:1000;
   overflow-x: auto;
   padding: 10px 0;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -148,8 +149,82 @@ backdrop-filter:blur(6px);padding:10px;z-index:1000;
 }
 
 .light-theme #themeToggle {
-  border-color: #000;
+  border-color: #000000;
 }
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+.modal.active {
+  display: flex;
+}
+.modal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+.modal-content {
+  position: relative;
+  background: #121318;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  z-index: 2 !important; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.modal-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.close-btn {
+  position: absolute;
+  padding: 5px;
+  right: 5px;
+  border: none;
+  font-size: 28px;
+  color: #000000;
+  background: #01d16f;
+  cursor: pointer;
+}
+
+/* Option 1 for Modal Link */
+/* .modal-link {
+  color: #09a6ff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s;
+}
+.modal-link:hover {
+  border-bottom: 1px solid #09a6ff;
+} */
+
+/* Option 1 for Modal Link */
+.modal-link {
+  display: none;
+  margin-top: 12px;
+  color: #09a6ff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s;
+}
+.modal-link:hover {
+  border-bottom: 1px solid #09a6ff;
+}
+
 /* MOBILE FIRST */
 @media (max-width: 768px) {
   .hero h1 {
